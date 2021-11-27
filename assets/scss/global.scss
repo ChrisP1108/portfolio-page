@@ -1,0 +1,30 @@
+// Colors 
+
+$a: #d86800;
+$b: #1a1a1a;
+$c: #8b8b8b;
+$d: #0d0d0df7;
+$e: #383838f7;
+$f: #9e4c00;
+$g: #A0A0A0;
+$h: #000000;
+
+// Spacing
+
+$headerHeight: 4.5rem;
+
+body {
+
+    h1 {
+        color: $c;
+        font-size: 1.375rem;
+        font-weight: 500;
+    }
+
+    h2 {
+        color: $c;
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+
+}

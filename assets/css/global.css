@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    font-family: 'Russo One', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #595959be, #472300ef), url('../images/background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
