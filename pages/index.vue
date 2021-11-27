@@ -1,7 +1,9 @@
 <template>
   <div class="master-container">
     <Header/>
-    <div class="blur"></div>
+    <div class="background"></div>
+    <div class="image"></div>
+    <div class="content-container"></div>
   </div>
 </template>
 
@@ -14,15 +16,51 @@ export default {}
 <style lang="scss">
   .master-container {
     width: 100%;
-    height: 64rem;
+    height: $bodyHeight;
     position: relative;
   }
-  .blur {
-    filter: blur(2px);
-    position: absolute;
+  .background {
+    // filter: blur(1px);
+    -webkit-filter: blur(0.0625rem);
+    position: fixed;
     width: 100%;
-    height: 100%!important;
-    z-index: 2;
+    height: $bodyHeight;
+    z-index: 0;
     top: $headerHeight;
+    background: linear-gradient(to bottom, $i, $j), url('../assets/images/background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: sizeAnimate;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes sizeAnimate {
+    from {transform: scale(1);}
+    to {transform: scale(1.1);}
+  }
+
+  .image {
+    position: fixed;
+    background: url('../assets/images/chris.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    top: 72%;
+    left: 5%;
+    height: 25rem;
+    filter: drop-shadow(0rem 0rem 1.25rem $j);
+    z-index: 5;
+  }
+  .content-container {
+    width: 50%;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    height: 6rem;
+    background: red;
+    position: fixed;
+    box-shadow: 8px 8px 10px;
   }
 </style>
