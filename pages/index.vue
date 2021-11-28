@@ -46,20 +46,20 @@ export default {}
     background: url('../assets/images/chris.webp');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50%;
+    width: 75%;
     top: 72%;
-    left: 5%;
+    left: 10%;
     height: 25rem;
     filter: drop-shadow(0rem 0rem 1.25rem $j);
     z-index: 5;
   }
   .content-container {
-    width: 50%;
+    width: 90%;
     left: 50%;
     top: 25%;
     transform: translateX(-50%);
     height: 6rem;
-    background: red;
+    background: rgba(255, 0, 0, 0.466);
     position: fixed;
     box-shadow: 8px 8px 10px;
   }
