@@ -1,16 +1,24 @@
 <template>
   <div class="master-container">
     <Header/>
+    <MobileMenu />
     <div class="background"></div>
-    <div class="image"></div>
-    <div class="content-container"></div>
+    <div class="content-container">
+      <div class="image"></div>
+    </div>
   </div>
 </template>
 
 <script>
 import styles from '../assets/scss/global.scss'
 
-export default {}
+export default { 
+  computed: {
+      mobileMenuToggle() {
+        return this.$store.state.mobileMenuToggle
+      } 
+  }
+}
 </script>
 
 <style lang="scss">
@@ -26,7 +34,7 @@ export default {}
     width: 100%;
     height: $bodyHeight;
     z-index: 0;
-    top: $headerHeight;
+    top: 0;
     background: linear-gradient(to bottom, $i, $j), url('../assets/images/background.webp');
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,20 +54,22 @@ export default {}
     background: url('../assets/images/chris.webp');
     background-repeat: no-repeat;
     background-size: contain;
-    width: 75%;
-    top: 72%;
-    left: 10%;
-    height: 25rem;
+    width: 100%;
+    top: 100%;
+    transform: translateY(-99%);
+    left: 7%;
+    height: 19rem;
     filter: drop-shadow(0rem 0rem 1.25rem $j);
     z-index: 5;
   }
+
   .content-container {
-    width: 90%;
+    width: 85%;
     left: 50%;
-    top: 25%;
+    top: $headerHeight + 3rem;
     transform: translateX(-50%);
-    height: 6rem;
-    background: rgba(255, 0, 0, 0.466);
+    height: 36.75rem;
+    background: linear-gradient(to bottom, $d, $e);
     position: fixed;
     box-shadow: 8px 8px 10px;
   }

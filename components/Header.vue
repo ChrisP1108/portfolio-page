@@ -54,6 +54,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem 0 1rem;
+    transition: 0.25s;
   }
   img {
     width: 3rem;
@@ -72,9 +73,10 @@
   .hamburger-container {
     display: flex;
     cursor: pointer;
+    transition: 0.25s;
   }
   .hamburger-on {
-    transition: 0.25s;
+    transition: 0.25s!important;
     position: absolute;
     top: 1.375rem;
     margin-left: 0.1875rem;
@@ -84,6 +86,7 @@
     background-repeat: no-repeat;
   }
   .hamburger-off {
+    transition: 0.25s!important;
     width: 2rem;
     height: 1.25rem;
     background: url('../assets/images/hamburger-off.svg');
