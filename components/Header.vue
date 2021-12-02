@@ -4,7 +4,6 @@
     <div class="logo-title">
       <img @click="reload" src="../assets/images/logo.svg"  class="hover-glow" 
         alt="logo">
-      </img>
       <h1>Chris Paschall</h1>
     </div>
     <div class="hamburger-container">

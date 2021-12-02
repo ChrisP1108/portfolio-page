@@ -1,11 +1,14 @@
 <template>
     <div class="mobile-menu-container">
-        <div :class="[mobileMenuToggle ? 'blur-off' : 'blur-on', 'mobile-toggled']"></div>
+        <div @click="mobileToggleOff" :class="[mobileMenuToggle ? 'blur-off' : 'blur-on', 'mobile-toggled']"></div>
         <div :class="[mobileMenuToggle ? 'slide-in' : 'slide-out', 'mobile-dropdown']">
-            <div :key="item.id" v-for="item in mobileMenuItems" class="mobile-menu-item">
-                <img src="../assets/images/logo.svg"  class="hover-glow" 
-                alt="logo">
-                <h2>{{ item.name }}</h2>
+            <div :key="item.id" @click="pageSelect(item.name)" v-for="item in mobileMenuItems" 
+                :class="[page !== item.name && 'hover-glow', 'mobile-menu-item']">
+                    <img v-if="page === item.name" src="../assets/images/mobile-menu-active-logo.svg" 
+                    alt=" menu-active-logo">
+                    <img v-if="page !== item.name" src="../assets/images/mobile-menu-inactive-logo.svg" 
+                    alt=" menu-inactive-logo">
+                    <h2 :class="[page === item.name && 'active-nav-link']">{{ item.name.toUpperCase() }}</h2>
             </div>
         </div>
     </div>
@@ -20,23 +23,23 @@ export default {
             mobileMenuItems: [
                 {
                     id: 1,
-                    name: 'HOME',
-                    link: '/'
+                    name: 'home'
                 },
                 {
                     id: 2,
-                    name: 'ABOUT',
-                    link: '/'
+                    name: 'about'
                 },
                 {
                     id: 3,
-                    name: 'PORTFOLIO',
-                    link: '/'
+                    name: 'portfolio'
                 },
                 {
                     id: 4,
-                    name: 'CONTACT',
-                    link: '/'
+                    name: 'resume'
+                },
+                {
+                    id: 5,
+                    name: 'contact'
                 }
             ]
         }
@@ -44,15 +47,32 @@ export default {
     computed: {
         mobileMenuToggle() {
             return this.$store.state.mobileMenuToggle
+        },
+        page() {
+            return this.$store.state.pageSelected
         } 
     },
-    created() {
-        console.log(this.mobileMenuItems);
+    methods: {
+        mobileToggleOff() {
+            window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'instant'
+            });  
+            this.$store.commit('mobileToggler', false);
+        },
+        pageSelect(selected) {
+            this.$store.commit('pageToggler', selected);
+            this.mobileToggleOff();
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+    img {
+        transition: 0.25s;
+    }
     .mobile-toggled {
         width: 100%;
         background: $blacktrans;
@@ -70,7 +90,6 @@ export default {
         top: $headerHeight;
         transform: translateY(-100%);
         transition: 0.25s;
-        padding: 0.5rem 0 0.5rem;
     }
     .mobile-menu-item {
         height: 6rem;
@@ -79,8 +98,6 @@ export default {
         align-items: center;
         padding: 0 1.75rem 0 1rem;
         cursor: pointer;
-    }
-    img {
         transition: 0.25s;
     }
     .slide-in {
