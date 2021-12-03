@@ -2,7 +2,7 @@
     <div class="home-container">
         <h1 class="orange-text">Full Stack Developer</h1>
         <div @click="pageSelect(item.name)" :key="item.id" 
-            v-for="item in buttons" class="button button-margin-bottom">
+            v-for="item in buttons" class="button hover-glow button-margin-bottom">
             <span>{{ item.name.toUpperCase() }}</span>
         </div>
     </div>
