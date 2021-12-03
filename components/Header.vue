@@ -4,7 +4,7 @@
     <div class="logo-title">
       <img @click="reload" src="../assets/images/logo.svg"  class="hover-glow" 
         alt="logo">
-      <h1>Chris Paschall</h1>
+      <h1 class="gray-text">Chris Paschall</h1>
     </div>
     <div class="hamburger-container">
       <div @click="mobileToggler" 

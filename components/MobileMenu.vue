@@ -1,6 +1,6 @@
 <template>
     <div class="mobile-menu-container">
-        <div @click="mobileToggleOff" :class="[mobileMenuToggle ? 'blur-off' : 'blur-on', 'mobile-toggled']"></div>
+        <div @click="mobileToggleOff" :class="[mobileMenuToggle ? 'blur-off' : 'blur-on d-none', 'mobile-toggled']"></div>
         <div :class="[mobileMenuToggle ? 'slide-in' : 'slide-out', 'mobile-dropdown']">
             <div :key="item.id" @click="pageSelect(item.name)" v-for="item in mobileMenuItems" 
                 :class="[page !== item.name && 'hover-glow', 'mobile-menu-item']">
@@ -18,33 +18,10 @@
 import styles from '../assets/scss/global.scss'
 
 export default { 
-    data() {
-        return {
-            mobileMenuItems: [
-                {
-                    id: 1,
-                    name: 'home'
-                },
-                {
-                    id: 2,
-                    name: 'about'
-                },
-                {
-                    id: 3,
-                    name: 'portfolio'
-                },
-                {
-                    id: 4,
-                    name: 'resume'
-                },
-                {
-                    id: 5,
-                    name: 'contact'
-                }
-            ]
-        }
-    },
     computed: {
+        mobileMenuItems() {
+            return this.$store.state.navMenuItems
+        },
         mobileMenuToggle() {
             return this.$store.state.mobileMenuToggle
         },

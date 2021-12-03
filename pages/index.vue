@@ -1,9 +1,10 @@
 <template>
   <div class="master-container">
-    <Header/>
+    <Header />
     <MobileMenu />
     <div class="background"></div>
     <div class="content-container">
+      <Home />
       <div class="image"></div>
     </div>
   </div>
@@ -38,10 +39,10 @@ export default {
     background: linear-gradient(to bottom, $i, $j), url('../assets/images/background.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    animation-name: sizeAnimate;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+    // animation-name: sizeAnimate;
+    // animation-duration: 60s;
+    // animation-direction: alternate;
+    // animation-iteration-count: infinite;
   }
 
   @keyframes sizeAnimate {
@@ -72,5 +73,6 @@ export default {
     background: linear-gradient(to bottom, $d, $e);
     position: fixed;
     box-shadow: 8px 8px 10px;
+    padding: 1.5rem;
   }
 </style>

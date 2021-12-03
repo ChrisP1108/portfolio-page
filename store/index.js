@@ -1,6 +1,28 @@
 export const state = () => ({
+    navMenuItems: [
+        {
+            id: 1,
+            name: 'home'
+        },
+        {
+            id: 2,
+            name: 'about'
+        },
+        {
+            id: 3,
+            name: 'portfolio'
+        },
+        {
+            id: 4,
+            name: 'resume'
+        },
+        {
+            id: 5,
+            name: 'contact'
+        }
+    ],
     mobileMenuToggle: false,
-    pageSelected: 'home'
+    pageSelected: 'home',
 });
 
 export const mutations = {
@@ -9,5 +31,6 @@ export const mutations = {
     },
     pageToggler(state, value) {
         state.pageSelected = value;
+        console.log(`Page Selected: ${state.pageSelected.toUpperCase()}`);
     }
 };
