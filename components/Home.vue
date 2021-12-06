@@ -7,36 +7,24 @@
         <div class="home-image"></div>
         <div class="links-container">
             <h1 class="orange-text">Links</h1>
-            <img @click="reload" src="../assets/images/linked-in.svg" class="hover-glow link-logo" 
-                alt="logo">
-            <img @click="reload" src="../assets/images/github.svg" class="hover-glow link-logo rounded" 
-                alt="logo">
+            <a href="https://www.linkedin.com/in/christopher-paschall/" target="_blank">
+                <img src="../assets/images/linked-in.svg" class="hover-glow link-logo chamfered" 
+                    alt="logo">
+            </a>
+            <a href="https://github.com/ChrisP1108" target="_blank">
+                <img src="../assets/images/github.svg" class="hover-glow link-logo rounded" 
+                    alt="logo">
+            </a>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        data() {
-            return {
-                homeButtons: [
-                    {
-                        id: 1,
-                        name: 'about'
-                    },
-                    {
-                        id: 2,
-                        name: 'portfolio'
-                    },
-                    {
-                        id: 3,
-                        name: 'resume'
-                    },
-                    {
-                        id: 4,
-                        name: 'contact'
-                    }
-                ]
+        computed: {
+            homeButtons() {
+                return this.$store.state.navMenuItems
+                    .filter(item => item.name !== 'home')
             }
         }
     }
@@ -65,12 +53,12 @@
     }
     .home-image {
         position: absolute;
-        background: url('../assets/images/chris.webp');
+        background: url('../assets/images/chris-1.webp');
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
         top: 100%;
-        transform: translateY(-99%);
+        transform: translateY(-100.75%);
         left: -10%;
         height: 17rem;
     }

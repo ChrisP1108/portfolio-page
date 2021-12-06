@@ -18,7 +18,8 @@ export const state = () => ({
         },
         {
             id: 5,
-            name: 'contact'
+            name: 'email',
+            email: 'chrisp1108@gmail.com'
         }
     ],
     mobileMenuToggle: false,

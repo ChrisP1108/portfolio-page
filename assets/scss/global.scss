@@ -17,7 +17,7 @@ $lightgray: #d1d1d1;
 // Spacing
 
 $headerHeight: 4.5rem;
-$bodyHeight: 100vh;
+$bodyHeight: 50rem;
 
 h1 {
     font-family: 'Russo One', sans-serif;
@@ -56,16 +56,19 @@ h2 {
     width: 2.625rem!important;
     height: 2.625rem!important;
     margin-bottom: 2.625rem!important;
-    cursor: pointer;
     transition: 0.25s;
 }
 
 .link-logo:hover {
-    background: $a;
+    background: $white;
 }
 
 .rounded {
     border-radius: 50%!important;
+}
+
+.chamfered {
+    border-radius: 10%;
 }
 
 // Blur Animation

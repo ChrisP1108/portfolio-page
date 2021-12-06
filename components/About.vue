@@ -1,15 +1,12 @@
 <template>
-    <div class="home-container">
+    <div class="about-container">
         <h1 class="orange-text">About</h1>
-        <div :key="item.id" v-for="item in aboutButtons">
-            <Button :item="item" />
-        </div>
         <div class="home-image"></div>
         <div class="links-container">
             <h1 class="orange-text">Links</h1>
-            <img @click="reload" src="../assets/images/linked-in.svg" class="hover-glow link-logo" 
+            <img src="../assets/images/linked-in.svg" class="hover-glow link-logo chamfered" 
                 alt="logo">
-            <img @click="reload" src="../assets/images/github.svg" class="hover-glow link-logo rounded" 
+            <img src="../assets/images/github.svg" class="hover-glow link-logo rounded" 
                 alt="logo">
         </div>
     </div>
@@ -17,29 +14,12 @@
 
 <script>
     export default {
-        data() {
-            return {
-                aboutButtons: [
-                    {
-                        id: 1,
-                        name: 'home'
-                    },
-                    {
-                        id: 2,
-                        name: 'portfolio'
-                    },
-                    {
-                        id: 3,
-                        name: 'contact'
-                    },
-                ]
-            }
-        }
+        name: 'About'
     }
 </script>
 
 <style lang="scss" scoped>
-    .home-container {
+    .about-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,7 +41,7 @@
     }
     .home-image {
         position: absolute;
-        background: url('../assets/images/chris.webp');
+        background: url('../assets/images/chris-1.webp');
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;

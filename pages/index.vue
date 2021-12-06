@@ -70,6 +70,7 @@ export default {
     position: relative;
     display: flex;
     justify-content: center;
+    max-width: 23.125rem;
   }
   .content-positioner {
     position: absolute;

@@ -1,5 +1,5 @@
 <template>
-    <div @click="pageSelect(item.name)" class="button hover-glow button-margin-bottom">
+    <div @click="selected(item.name)" class="button hover-glow button-margin-bottom">
         {{ item.name.toUpperCase() }}
     </div>
 </template>
@@ -8,11 +8,23 @@
     export default {
         name: 'Button',
         props: {
-            item: String
+            item: Object
+        },
+        computed: {
+            email() {
+                return this.$store.state.navMenuItems
+                    .find(item => item.name === 'email').email;
+            }
         },
         methods: {
-            pageSelect(selected) {
-                this.$store.commit('pageToggler', selected);
+            selected(selected) {
+                if (selected === 'email') {
+                    const mail = document.createElement("a");
+                    mail.href = `mailto:${this.email}`;
+                    mail.click();
+                } else {
+                    this.$store.commit('pageToggler', selected);
+                }
             }
         }
     }
