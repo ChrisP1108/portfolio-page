@@ -4,8 +4,12 @@
     <MobileMenu />
     <div class="background"></div>
     <div class="content-container">
-      <Home />
-      <div class="image"></div>
+      <div :class="[page === 'home' ? 'blur-off' : 'blur-on', 'content-positioner']">
+        <Home />
+      </div>
+      <div :class="[page === 'about' ? 'blur-off' : 'blur-on', 'content-positioner']">
+        <About />
+      </div>
     </div>
   </div>
 </template>
@@ -15,9 +19,12 @@ import styles from '../assets/scss/global.scss'
 
 export default { 
   computed: {
-      mobileMenuToggle() {
-        return this.$store.state.mobileMenuToggle
-      } 
+    mobileMenuToggle() {
+      return this.$store.state.mobileMenuToggle
+    },
+    page() {
+      return this.$store.state.pageSelected
+    } 
   }
 }
 </script>
@@ -50,20 +57,6 @@ export default {
     to {transform: scale(1.1);}
   }
 
-  .image {
-    position: fixed;
-    background: url('../assets/images/chris.webp');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    top: 100%;
-    transform: translateY(-99%);
-    left: 7%;
-    height: 19rem;
-    filter: drop-shadow(0rem 0rem 1.25rem $j);
-    z-index: 5;
-  }
-
   .content-container {
     width: 85%;
     left: 50%;
@@ -72,7 +65,13 @@ export default {
     height: 36.75rem;
     background: linear-gradient(to bottom, $d, $e);
     position: fixed;
-    box-shadow: 8px 8px 10px;
+    box-shadow: 0.5rem 0.5rem 0.625rem $b;
     padding: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .content-positioner {
+    position: absolute;
   }
 </style>

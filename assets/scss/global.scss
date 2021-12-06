@@ -12,11 +12,12 @@ $i: #595959be;
 $j: #472300ef;
 $blacktrans: #000000bb;
 $white: #fff;
+$lightgray: #d1d1d1;
 
 // Spacing
 
 $headerHeight: 4.5rem;
-$bodyHeight: 56rem;
+$bodyHeight: 100vh;
 
 h1 {
     font-family: 'Russo One', sans-serif;
@@ -42,38 +43,29 @@ h2 {
     color: $a;
 }
 
-.button {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    max-width: 12.5rem;
-    height: 2.25rem;
-    background: $f;
-    border-radius: 0.375rem;
-    color: $b;
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: 0.25s;
-}
-
-.button:hover {
-    cursor: pointer;
-    color: $white;
-}
-
-.button-margin-bottom {
-    margin-bottom: 1.5rem;
-}
-
 .hover-glow:hover {
     filter: drop-shadow(0px 0px 10px $f);
 }
 
+
 .active-nav-link {
     color: $white;
+}
+
+.link-logo {
+    width: 2.625rem!important;
+    height: 2.625rem!important;
+    margin-bottom: 2.625rem!important;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.link-logo:hover {
+    background: $a;
+}
+
+.rounded {
+    border-radius: 50%!important;
 }
 
 // Blur Animation
@@ -86,8 +78,8 @@ h2 {
 
 @keyframes blurOn {
     0% {filter: blur(0rem); opacity: 1;}
-    99% {filter: blur(0.5rem); opacity: 0;}
-    100% {opacity: 0; display: none}
+    99% {filter: blur(0.5rem); opacity: 0; transform: translateX(0%)}
+    100% {transform: translateX(9000px)}
 }
 
 .blur-off {
@@ -98,7 +90,7 @@ h2 {
 }
 
 @keyframes blurOff {
-    0% {filter: blur(0.5rem); opacity: 0; display: contents;}
+    0% {filter: blur(0.5rem); opacity: 0; transform: translateX(0%)}
     99% {filter: blur(0rem); opacity: 1;}
     100% {opacity: 1;}
 }

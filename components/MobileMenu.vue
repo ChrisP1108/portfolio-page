@@ -1,6 +1,6 @@
 <template>
     <div class="mobile-menu-container">
-        <div @click="mobileToggleOff" :class="[mobileMenuToggle ? 'blur-off' : 'blur-on d-none', 'mobile-toggled']"></div>
+        <div @click="mobileToggleOff" :class="[mobileMenuToggle ? 'blur-off' : 'blur-on', 'mobile-toggled']"></div>
         <div :class="[mobileMenuToggle ? 'slide-in' : 'slide-out', 'mobile-dropdown']">
             <div :key="item.id" @click="pageSelect(item.name)" v-for="item in mobileMenuItems" 
                 :class="[page !== item.name && 'hover-glow', 'mobile-menu-item']">

@@ -1,7 +1,7 @@
 <template>
     <div class="home-container">
-        <h1 class="orange-text">Full Stack Developer</h1>
-        <div :key="item.id" v-for="item in homeButtons">
+        <h1 class="orange-text">About</h1>
+        <div :key="item.id" v-for="item in aboutButtons">
             <Button :item="item" />
         </div>
         <div class="home-image"></div>
@@ -19,10 +19,10 @@
     export default {
         data() {
             return {
-                homeButtons: [
+                aboutButtons: [
                     {
                         id: 1,
-                        name: 'about'
+                        name: 'home'
                     },
                     {
                         id: 2,
@@ -30,12 +30,8 @@
                     },
                     {
                         id: 3,
-                        name: 'resume'
-                    },
-                    {
-                        id: 4,
                         name: 'contact'
-                    }
+                    },
                 ]
             }
         }
@@ -54,7 +50,7 @@
         margin-bottom: 2.375rem;
     }
     .links-container {
-        margin-top: 2rem;
+        margin-top: 3.125rem;
         margin-left: 68%;
         display: flex;
         width: 50%;
@@ -71,7 +67,7 @@
         width: 100%;
         top: 100%;
         transform: translateY(-99%);
-        left: -10%;
-        height: 17rem;
+        left: 5%;
+        height: 19rem;
     }
 </style>
