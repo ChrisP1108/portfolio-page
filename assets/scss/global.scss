@@ -17,13 +17,19 @@ $lightgray: #d1d1d1;
 // Spacing
 
 $headerHeight: 4.5rem;
-$bodyHeight: 50rem;
+$bodyHeight: 100vh;
+
+html {
+    min-height: 48rem!important;
+}
 
 h1 {
     font-family: 'Russo One', sans-serif;
     font-size: 1.375rem;
     font-weight: 500;
-    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 2.375rem;
 }
 
 h2 {
@@ -33,6 +39,15 @@ h2 {
     font-weight: 500;
     margin: 0;
     transition: 0.25s;
+}
+
+p {
+    font-family: 'Hammersmith One', sans-serif;
+    color: $a;
+    font-size: 0.875rem;
+    transition: 0.25s;
+    margin: 0;
+    text-align: center;
 }
 
 .gray-text {
@@ -71,6 +86,15 @@ h2 {
     border-radius: 10%;
 }
 
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
 // Blur Animation
 
 .blur-on {
@@ -81,8 +105,8 @@ h2 {
 
 @keyframes blurOn {
     0% {filter: blur(0rem); opacity: 1;}
-    99% {filter: blur(0.5rem); opacity: 0; transform: translateX(0%)}
-    100% {transform: translateX(9000px)}
+    99% {filter: blur(0.5rem); opacity: 0; transform: scale(1);}
+    100% {transform: scale(0)}
 }
 
 .blur-off {
@@ -93,7 +117,7 @@ h2 {
 }
 
 @keyframes blurOff {
-    0% {filter: blur(0.5rem); opacity: 0; transform: translateX(0%)}
+    0% {filter: blur(0.5rem); opacity: 0; transform: scale(1)}
     99% {filter: blur(0rem); opacity: 1;}
     100% {opacity: 1;}
 }

@@ -15,9 +15,13 @@
 </template>
 
 <script>
-import styles from '../assets/scss/global.scss'
-
+// import styles from '../assets/scss/global.scss'
+import frag from 'vue-frag';
+    
 export default { 
+  directives: {
+    frag
+  },
   computed: {
     mobileMenuToggle() {
       return this.$store.state.mobileMenuToggle
@@ -64,13 +68,13 @@ export default {
     transform: translateX(-50%);
     height: 36.75rem;
     background: linear-gradient(to bottom, $d, $e);
-    position: fixed;
     box-shadow: 0.5rem 0.5rem 0.625rem $b;
     padding: 1.5rem;
     position: relative;
     display: flex;
     justify-content: center;
     max-width: 23.125rem;
+    margin-bottom: 3rem;
   }
   .content-positioner {
     position: absolute;

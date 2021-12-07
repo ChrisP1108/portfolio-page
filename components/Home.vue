@@ -1,5 +1,5 @@
 <template>
-    <div class="home-container">
+    <div class="page-container">
         <h1 class="orange-text">Full Stack Developer</h1>
         <div :key="item.id" v-for="item in homeButtons">
             <Button :item="item" />
@@ -7,14 +7,15 @@
         <div class="home-image"></div>
         <div class="links-container">
             <h1 class="orange-text">Links</h1>
-            <a href="https://www.linkedin.com/in/christopher-paschall/" target="_blank">
+            <!-- <a href="https://www.linkedin.com/in/christopher-paschall/" target="_blank">
                 <img src="../assets/images/linked-in.svg" class="hover-glow link-logo chamfered" 
                     alt="logo">
             </a>
             <a href="https://github.com/ChrisP1108" target="_blank">
                 <img src="../assets/images/github.svg" class="hover-glow link-logo rounded" 
                     alt="logo">
-            </a>
+            </a> -->
+            <Links />
         </div>
     </div>
 </template>
@@ -31,16 +32,6 @@
 </script>
 
 <style lang="scss" scoped>
-    .home-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    h1 {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 2.375rem;
-    }
     .links-container {
         margin-top: 2rem;
         margin-left: 68%;

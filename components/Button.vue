@@ -19,9 +19,7 @@
         methods: {
             selected(selected) {
                 if (selected === 'email') {
-                    const mail = document.createElement("a");
-                    mail.href = `mailto:${this.email}`;
-                    mail.click();
+                    window.location.assign(`mailto:${this.email}`);
                 } else {
                     this.$store.commit('pageToggler', selected);
                 }

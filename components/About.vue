@@ -1,53 +1,52 @@
 <template>
-    <div class="about-container">
+    <div class="page-container">
         <h1 class="orange-text">About</h1>
-        <div class="home-image"></div>
-        <div class="links-container">
-            <h1 class="orange-text">Links</h1>
-            <img src="../assets/images/linked-in.svg" class="hover-glow link-logo chamfered" 
-                alt="logo">
-            <img src="../assets/images/github.svg" class="hover-glow link-logo rounded" 
-                alt="logo">
+        <p class="padding">With Over 15 years in highly technical roles,
+            I know the details can make a hige impact on your brand. 
+            Utilizing the latest technologies, I can help deliver your message 
+            and allow users to actively be engaged, allowing better two way 
+            communication and a much better quality user experience.
+        </p>
+        <div class="button-spacing">
+            <div :key="item.id" v-for="item in aboutButtons">
+                <Button :item="item" />
+            </div>
+        </div>
+        <div class="links">
+            <Links />
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'About'
+        name: 'About',
+        computed: {
+            aboutButtons() {
+                return this.$store.state.navMenuItems.filter(item => {
+                    if (item.name === 'home' || item.name === 'about') {
+                        return false;
+                    } else return true;
+                });
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-    .about-container {
+    .page-container {
+        justify-content: space-between;
+    }
+    .padding {
+        padding: 0 1.5rem ;
+    }
+    p {
+        margin-bottom: 8vw;
+    }
+    .links {
+        margin-top: 8vw;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    h1 {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 2.375rem;
-    }
-    .links-container {
-        margin-top: 3.125rem;
-        margin-left: 68%;
-        display: flex;
-        width: 50%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-    }
-    .home-image {
-        position: absolute;
-        background: url('../assets/images/chris-1.webp');
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 100%;
-        top: 100%;
-        transform: translateY(-99%);
-        left: 5%;
-        height: 19rem;
+        justify-content: space-between;
+        width: 40%;
     }
 </style>
