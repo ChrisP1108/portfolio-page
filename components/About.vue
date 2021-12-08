@@ -2,7 +2,7 @@
     <div class="page-container">
         <h1 class="orange-text">About</h1>
         <p class="padding">With Over 15 years in highly technical roles,
-            I know the details can make a hige impact on your brand. 
+            I know the details can make a huge impact on your brand. 
             Utilizing the latest technologies, I can help deliver your message 
             and allow users to actively be engaged, allowing better two way 
             communication and a much better quality user experience.
@@ -11,9 +11,6 @@
             <div :key="item.id" v-for="item in aboutButtons">
                 <Button :item="item" />
             </div>
-        </div>
-        <div class="links">
-            <Links />
         </div>
     </div>
 </template>
@@ -38,15 +35,9 @@
         justify-content: space-between;
     }
     .padding {
-        padding: 0 1.5rem ;
+        padding: 0 8vw;
     }
     p {
-        margin-bottom: 8vw;
-    }
-    .links {
-        margin-top: 8vw;
-        display: flex;
-        justify-content: space-between;
-        width: 40%;
+        margin-bottom: 9vw;
     }
 </style>

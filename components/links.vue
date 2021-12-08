@@ -22,5 +22,13 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .link-logo {
+        width: 2.625rem!important;
+        height: 2.625rem!important;
+        // margin-bottom: 2.625rem!important;
+        transition: 0.25s;
+    }
+    .link-logo:hover {
+        background: $white;
+    }
 </style>

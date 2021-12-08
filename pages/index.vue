@@ -10,6 +10,12 @@
       <div :class="[page === 'about' ? 'blur-off' : 'blur-on', 'content-positioner']">
         <About />
       </div>
+      <div :class="[page === 'portfolio' ? 'blur-off' : 'blur-on', 'content-positioner']">
+        <Portfolio />
+      </div>
+      <div :class="[page !== 'home' ? 'blur-off' : 'blur-on', 'links']">
+        <Links />
+      </div>
     </div>
   </div>
 </template>
@@ -50,10 +56,6 @@ export default {
     background: linear-gradient(to bottom, $i, $j), url('../assets/images/background.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    // animation-name: sizeAnimate;
-    // animation-duration: 60s;
-    // animation-direction: alternate;
-    // animation-iteration-count: infinite;
   }
 
   @keyframes sizeAnimate {
@@ -66,7 +68,7 @@ export default {
     left: 50%;
     top: $headerHeight + 3rem;
     transform: translateX(-50%);
-    height: 36.75rem;
+    height: $containerHeight;
     background: linear-gradient(to bottom, $d, $e);
     box-shadow: 0.5rem 0.5rem 0.625rem $b;
     padding: 1.5rem;
@@ -78,5 +80,12 @@ export default {
   }
   .content-positioner {
     position: absolute;
+    max-height: 100%;
   }
+  .links {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
 </style>

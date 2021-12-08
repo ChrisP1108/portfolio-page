@@ -5,17 +5,11 @@
             <Button :item="item" />
         </div>
         <div class="home-image"></div>
-        <div class="links-container">
+        <div class="links-section">
             <h1 class="orange-text">Links</h1>
-            <!-- <a href="https://www.linkedin.com/in/christopher-paschall/" target="_blank">
-                <img src="../assets/images/linked-in.svg" class="hover-glow link-logo chamfered" 
-                    alt="logo">
-            </a>
-            <a href="https://github.com/ChrisP1108" target="_blank">
-                <img src="../assets/images/github.svg" class="hover-glow link-logo rounded" 
-                    alt="logo">
-            </a> -->
-            <Links />
+            <div class="links-container">
+                <Links />
+            </div>
         </div>
     </div>
 </template>
@@ -32,7 +26,10 @@
 </script>
 
 <style lang="scss" scoped>
-    .links-container {
+    .page-container {
+        height: $containerHeight - 3rem!important;
+    }
+    .links-section {
         margin-top: 2rem;
         margin-left: 68%;
         display: flex;
@@ -42,6 +39,12 @@
         align-items: center;
         z-index: 1;
     }
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 7.875rem;
+    }
     .home-image {
         position: absolute;
         background: url('../assets/images/chris-1.webp');
@@ -49,7 +52,7 @@
         background-size: contain;
         width: 100%;
         top: 100%;
-        transform: translateY(-100.75%);
+        transform: translateY(-90.25%);
         left: -10%;
         height: 17rem;
     }
