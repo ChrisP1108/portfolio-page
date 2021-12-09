@@ -1,8 +1,10 @@
 <template>
     <div class="page-container">
         <h1 class="orange-text">Portfolio</h1>
-        
-        <div class="button-spacing">
+        <div class="grid-container">
+            <PortfolioSample :key="sample.id" v-for="sample in samples" :sample="sample" />
+        </div>
+        <div>
             <div :key="item.id" v-for="item in aboutButtons">
                 <Button :item="item" />
             </div>
@@ -15,17 +17,58 @@
         name: 'About',
         computed: {
             aboutButtons() {
-                return this.$store.state.navMenuItems.filter(item => 
-                    item.name === 'resume'
-                );
+                return this.$store.state.navMenuItems.filter(item => {
+                    if (item.name === 'resume' || item.name === 'email') {
+                        return true
+                    }
+                });
+            }
+        },
+        data() {
+            return {
+                samples: [
+                    {
+                        id: 1,
+                        title: 'Product Feedback App',
+                        framework: 'Vue',
+                        imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vnx44muoxqyn886oi5sb.jpg'
+                    },
+                    {
+                        id: 2,
+                        title: 'Invoice App',
+                        framework: 'React',
+                        imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/v760dr4mqyro0xey3dr3.jpg'
+                    },
+                    {
+                        id: 3,
+                        title: 'Pomodoro App',
+                        framework: 'React',
+                        imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/tiush3hkni9uznayk0hr.jpg'
+                    },
+                    {
+                        id: 4,
+                        title: 'The Planets',
+                        framework: 'React',
+                        imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/g9eewklurmolti0smptf.jpg'
+                    }
+                ]
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
+    h1 {
+        margin-bottom: 0!important;
+    }
     .page-container {
         justify-content: space-between;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2rem;
     }
     .padding {
         padding: 0 8vw;

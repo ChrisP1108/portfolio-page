@@ -26,7 +26,7 @@
         width: 2.625rem!important;
         height: 2.625rem!important;
         // margin-bottom: 2.625rem!important;
-        transition: 0.25s;
+        transition: $fadeTransition;
     }
     .link-logo:hover {
         background: $white;

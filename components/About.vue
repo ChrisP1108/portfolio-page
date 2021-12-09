@@ -7,7 +7,7 @@
             and allow users to actively be engaged, allowing better two way 
             communication and a much better quality user experience.
         </p>
-        <div class="button-spacing">
+        <div>
             <div :key="item.id" v-for="item in aboutButtons">
                 <Button :item="item" />
             </div>
@@ -36,8 +36,5 @@
     }
     .padding {
         padding: 0 8vw;
-    }
-    p {
-        margin-bottom: 9vw;
     }
 </style>

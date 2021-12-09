@@ -26,6 +26,9 @@
 </script>
 
 <style lang="scss" scoped>
+    h1 {
+        margin: 0 0 2.375rem;
+    }
     .page-container {
         height: $containerHeight - 3rem!important;
     }

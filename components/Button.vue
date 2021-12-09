@@ -43,7 +43,7 @@
         font-family: 'Hammersmith One', sans-serif;
         font-size: 1rem;
         font-weight: 600;
-        transition: 0.25s;
+        transition: $fadeTransition;
         box-shadow: 4px 4px 10px $b;
     }
 

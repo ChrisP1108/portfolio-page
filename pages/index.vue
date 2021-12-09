@@ -3,7 +3,7 @@
     <Header />
     <MobileMenu />
     <div class="background"></div>
-    <div class="content-container">
+    <div :class="[mobileMenuToggle && 'blur-container', 'content-container']">
       <div :class="[page === 'home' ? 'blur-off' : 'blur-on', 'content-positioner']">
         <Home />
       </div>
@@ -77,6 +77,7 @@ export default {
     justify-content: center;
     max-width: 23.125rem;
     margin-bottom: 3rem;
+    transition: $fadeTransition;
   }
   .content-positioner {
     position: absolute;
@@ -86,6 +87,9 @@ export default {
     margin-top: auto;
     display: flex;
     justify-content: space-between;
-    width: 40%;
-}
+    width: 50%;
+  }
+  .blur-container {
+    filter: blur(1rem);
+  }
 </style>

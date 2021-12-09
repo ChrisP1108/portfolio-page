@@ -48,12 +48,12 @@ export default {
 
 <style lang="scss" scoped>
     img {
-        transition: 0.25s;
+        transition: $fadeTransition;
     }
     .mobile-toggled {
         width: 100%;
         background: $blacktrans;
-        transition: 0.25s;
+        transition: $fadeTransition;
         z-index: 6;
         top: $headerHeight;
         height: $bodyHeight;
@@ -66,7 +66,7 @@ export default {
         z-index: 7;
         top: $headerHeight;
         transform: translateY(-100%);
-        transition: 0.25s;
+        transition: $fadeTransition;
     }
     .mobile-menu-item {
         height: 6rem;
@@ -75,7 +75,7 @@ export default {
         align-items: center;
         padding: 0 1.75rem 0 1rem;
         cursor: pointer;
-        transition: 0.25s;
+        transition: $fadeTransition;
     }
     .slide-in {
         animation-name: slideIn;
