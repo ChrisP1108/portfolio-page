@@ -1,6 +1,6 @@
 <template>
     <div @click="openPage" v-bind:style="backgroundImg" class="sample-container">
-        <img :src="`../images/${sample.framework}-icon.svg`" :alt="sample.framework">
+        <img :src="`${baseUrl}/${sample.framework}-icon.svg`" :alt="sample.framework">
     </div>
 </template>
 
@@ -20,7 +20,8 @@
                 backgroundImg: {
                     background: `url('${this.sample.imgSrc}')`,
                     backgroundSize: 'contain'
-                }
+                },
+                baseUrl: 'https://raw.githubusercontent.com/ChrisP1108/portfolio-page/main/assets/images'
             }
         }
     }
@@ -42,7 +43,6 @@
     }
 
     img {
-        border-radius: 50%;
         background-size: contain;
         width: 3.125rem;
         height: 3.125rem;
