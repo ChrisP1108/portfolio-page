@@ -1,5 +1,5 @@
 <template>
-  <!-- All routing done in Vuex Store -->
+  <!-- All routing done in Vuex Store in router function-->
   <div class="master-container">
     <Header />
     <MobileMenu />

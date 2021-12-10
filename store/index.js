@@ -1,38 +1,22 @@
+import { routesList } from '../routes/routesList.js'
+
 // Routing
 
 function router(value) {
     // Page Selected State Set On Page Load
     if (!value) {
-        return window.location.hash.slice(1) || 'home';
+        const routes = routesList.map(route => route.name);
+        const url = window.location.hash.slice(1);
+        const setState = routes.includes(url) ? url : 'home';
+        window.history.pushState({}, '', setState === 'home' ? '/' : `#${setState}`);
+        return setState;
     }
     // Page Clicked Route Change
     window.history.pushState({}, '', value === 'home' ? '/' : `#${value}`);
 }
 
 export const state = () => ({
-    navMenuItems: [
-        {
-            id: 1,
-            name: 'home'
-        },
-        {
-            id: 2,
-            name: 'about'
-        },
-        {
-            id: 3,
-            name: 'portfolio'
-        },
-        {
-            id: 4,
-            name: 'resume'
-        },
-        {
-            id: 5,
-            name: 'email',
-            email: 'chrisp1108@gmail.com'
-        }
-    ],
+    navMenuItems: routesList,
     mobileMenuToggle: false,
     pageSelected: router(),
 });
