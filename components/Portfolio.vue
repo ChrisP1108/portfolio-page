@@ -30,25 +30,25 @@
                     {
                         id: 1,
                         title: 'Product Feedback App',
-                        framework: 'Vue',
+                        framework: 'vue',
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vnx44muoxqyn886oi5sb.jpg'
                     },
                     {
                         id: 2,
                         title: 'Invoice App',
-                        framework: 'React',
+                        framework: 'react',
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/v760dr4mqyro0xey3dr3.jpg'
                     },
                     {
                         id: 3,
                         title: 'Pomodoro App',
-                        framework: 'React',
+                        framework: 'react',
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/tiush3hkni9uznayk0hr.jpg'
                     },
                     {
                         id: 4,
                         title: 'The Planets',
-                        framework: 'React',
+                        framework: 'react',
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/g9eewklurmolti0smptf.jpg'
                     }
                 ]

@@ -1,4 +1,5 @@
 <template>
+  <!-- All routing done in Vuex Store -->
   <div class="master-container">
     <Header />
     <MobileMenu />

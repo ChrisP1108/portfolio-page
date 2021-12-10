@@ -1,6 +1,6 @@
 <template>
-    <div @click="openPage" class="sample-container">
-        <h1 class="orange-text">Test</h1>
+    <div @click="openPage" v-bind:style="backgroundImg" class="sample-container">
+        <img :src="`../images/${sample.framework}-icon.svg`" :alt="sample.framework">
     </div>
 </template>
 
@@ -14,15 +14,38 @@
             openPage() {
                 console.log(this.sample.title);
             }
+        },
+        data() {
+            return {
+                backgroundImg: {
+                    background: `url('${this.sample.imgSrc}')`,
+                    backgroundSize: 'contain'
+                }
+            }
         }
     }
 </script>
 
-<style>
+<style lang="scss" scoped>
     .sample-container {
-        background: rgba(255, 0, 0, 0.507);
+        filter: drop-shadow(4px 4px 10px $a);
         width: 6.25rem;
         height: 6.25rem;
         cursor: pointer;
+        border-radius: 50%;
+        transition: $fadeTransition;
+    }
+
+    .sample-container:hover {
+        transform: scale(1.5);
+        z-index: 10;
+    }
+
+    img {
+        border-radius: 50%;
+        background-size: contain;
+        width: 3.125rem;
+        height: 3.125rem;
+        filter: drop-shadow(4px 4px 10px $h);
     }
 </style>

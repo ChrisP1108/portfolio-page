@@ -1,3 +1,14 @@
+// Routing
+
+function router(value) {
+    // Page Selected State Set On Page Load
+    if (!value) {
+        return window.location.hash.slice(1) || 'home';
+    }
+    // Page Clicked Route Change
+    window.history.pushState({}, '', value === 'home' ? '/' : `#${value}`);
+}
+
 export const state = () => ({
     navMenuItems: [
         {
@@ -23,7 +34,7 @@ export const state = () => ({
         }
     ],
     mobileMenuToggle: false,
-    pageSelected: 'home',
+    pageSelected: router(),
 });
 
 export const mutations = {
@@ -31,6 +42,7 @@ export const mutations = {
         state.mobileMenuToggle = value;
     },
     pageToggler(state, value) {
+        router(value);
         state.pageSelected = value;
         console.log(`Page Selected: ${state.pageSelected.toUpperCase()}`);
     }
