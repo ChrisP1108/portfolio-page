@@ -32,22 +32,6 @@
     .page-container {
         height: $containerHeight - 3rem!important;
     }
-    .links-section {
-        margin-top: 2rem;
-        margin-left: 68%;
-        display: flex;
-        width: 50%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-    }
-    .links-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 7.875rem;
-    }
     .home-image {
         position: absolute;
         background: url('../assets/images/chris-1.webp');

@@ -18,11 +18,7 @@
         },
         methods: {
             selected(selected) {
-                if (selected === 'email') {
-                    window.location.assign(`mailto:${this.email}`);
-                } else {
-                    this.$store.commit('pageToggler', selected);
-                }
+                this.$store.commit('pageToggler', selected);
             }
         }
     }

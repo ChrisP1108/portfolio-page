@@ -14,7 +14,10 @@
       <div :class="[page === 'portfolio' ? 'blur-off' : 'blur-on', 'content-positioner']">
         <Portfolio />
       </div>
-      <div :class="[page !== 'home' ? 'blur-off' : 'blur-on', 'links']">
+      <div :class="[page === 'contact' ? 'blur-off' : 'blur-on', 'content-positioner']">
+        <Contact />
+      </div>
+      <div :class="[page !== 'home' && page !== 'contact' ? 'blur-off' : 'blur-on', 'links']">
         <Links />
       </div>
     </div>

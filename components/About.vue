@@ -1,7 +1,7 @@
 <template>
     <div class="page-container">
         <h1 class="orange-text">About</h1>
-        <p class="padding">With Over 15 years in highly technical roles,
+        <p class="padding small-text">With Over 15 years in highly technical roles,
             I know the details can make a huge impact on your brand. 
             Utilizing the latest technologies, I can help deliver your message 
             and allow users to actively be engaged, allowing better two way 

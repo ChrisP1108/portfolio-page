@@ -1,6 +1,6 @@
 <template>
     <div @click="openPage" class="sample-container">
-        <p>{{ sample.title }}</p>
+        <p class="medium-text">{{ sample.title }}</p>
         <img :src="`${baseUrl}/${sample.framework}-icon.svg`" :alt="sample.framework">
         <div v-bind:style="backgroundImg" class="background-container"></div>
     </div>
@@ -21,8 +21,7 @@
             return {
                 backgroundImg: {
                     background: `url('${this.sample.imgSrc}')`,
-                    backgroundSize: 'contain',
-                    borderRadius: '50%'
+                    backgroundSize: 'contain'
                 },
                 baseUrl: 'https://raw.githubusercontent.com/ChrisP1108/portfolio-page/main/assets/images'
             }
@@ -36,7 +35,6 @@
         width: 6.25rem;
         height: 6.25rem;
         cursor: pointer;
-        border-radius: 50%;
         transition: $fadeTransition;
         display: flex;
         justify-content: center;
@@ -46,6 +44,8 @@
     .background-container {
         width: 6.25rem;
         height: 6.25rem;
+        border-radius: 25%;
+        transition: $fadeTransition;
     }
     p {
         position: absolute;
@@ -62,10 +62,7 @@
 
         .background-container {
             filter: brightness(0.25) blur(1px);
-        }
-        img {
-            opacity: 0;
-            z-index: 10;
+            border-radius: 50%;
         }
         p {
             opacity: 1;
@@ -83,6 +80,8 @@
         top: 50%;
         transform: translateY(-50%);
         opacity: 1;
-        transition: 0.5s;
+    }
+    img:hover {
+        opacity: 0;
     }
 </style>

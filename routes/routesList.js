@@ -17,7 +17,6 @@ export const routesList = [
     },
     {
         id: 5,
-        name: 'email',
-        email: 'chrisp1108@gmail.com'
+        name: 'contact',
     }
 ]

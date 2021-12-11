@@ -45,10 +45,36 @@ h2 {
     transition: $fadeTransition;
 }
 
-p {
+.links-section {
+    margin-top: 2rem;
+    margin-left: 68%;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.875rem;
+}
+
+.small-text {
     font-family: 'Hammersmith One', sans-serif;
     color: $a;
     font-size: 0.875rem;
+    transition: $fadeTransition;
+    margin: 0;
+    text-align: center;
+}
+
+.medium-text {
+    font-family: 'Hammersmith One', sans-serif;
+    color: $a;
+    font-size: 1rem;
     transition: $fadeTransition;
     margin: 0;
     text-align: center;
