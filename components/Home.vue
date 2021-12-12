@@ -40,7 +40,16 @@
         width: 100%;
         top: 100%;
         transform: translateY(-90.25%);
-        left: -10%;
+        left: 0vw;
         height: 17rem;
+    }
+    @media(min-width: 576px) {
+        .page-container {
+            align-items: flex-end;
+        }
+        .home-image {
+            left: -5vw;
+            height: 28rem;
+        }
     }
 </style>

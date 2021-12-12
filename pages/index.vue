@@ -78,9 +78,10 @@ export default {
     position: relative;
     display: flex;
     justify-content: center;
-    max-width: 23.125rem;
+    max-width: 28rem;
     margin-bottom: 3rem;
     transition: $fadeTransition;
+    overflow: hidden;
   }
   .content-positioner {
     position: absolute;
@@ -94,5 +95,25 @@ export default {
   }
   .blur-container {
     filter: blur(1rem);
+  }
+
+  @media(min-width: 576px) {
+    .content-container {
+      max-width: 85%;
+      top: $headerHeight + 5rem;
+      // left: 50%;
+      // top: $headerHeight + 3rem;
+      // transform: translateX(-50%);
+      // height: $containerHeight;
+      // background: linear-gradient(to bottom, $d, $e);
+      // box-shadow: 0.5rem 0.5rem 0.625rem $b;
+      // padding: 1.5rem;
+      // position: relative;
+      // display: flex;
+      // justify-content: center;
+      // max-width: 23.125rem;
+      // margin-bottom: 3rem;
+      // transition: $fadeTransition;
+    }
   }
 </style>
