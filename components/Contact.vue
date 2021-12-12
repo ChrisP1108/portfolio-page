@@ -1,14 +1,15 @@
 <template>
     <div class="page-container">
         <h1 class="orange-text">Contact Me</h1>
-        <p class="small-text">Fill out the form below to contact me.</p>
-        <form action="mailto:ChrisP1108@gmail.com" method="post" enctype="text/plain">
-            <label for="name" class="orange-text medium-text" placeholder="Enter Your Name">Name</label>
-                <input type="text" id="name" name="name">
+        <p class="small-text">Fill out the form below.</p>
+        <form :action="email" method="POST">
+            <label for="name" class="orange-text medium-text">Name</label>
+                <input required type="text" id="name" name="name">
+            <label for="email" class="orange-text medium-text"> Email</label>
+                <input required type="email" id="email" name="email">
             <label for="message" class="orange-text medium-text">Message</label>
-                <textarea id="message" name="message"></textarea>
-            <label for="email" class="orange-text medium-text">Email</label>
-                <input type="email" id="name" name="name">
+                <textarea required id="message" name="message" rows="5"></textarea>
+            <input type="submit" class="button hover-glow" value="SUBMIT">
         </form>
     </div>
 </template>
@@ -56,7 +57,8 @@
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/g9eewklurmolti0smptf.jpg',
                         url: 'https://www.frontendmentor.io/solutions/react-js-css-Wkb7XDzsI'
                     }
-                ]
+                ],
+                email: 'https://formsubmit.co/ChrisP1108@gmail.com'
             }
         }
     }
@@ -64,24 +66,59 @@
 
 <style lang="scss" scoped>
     h1 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     p {
-        margin-bottom: 1.5rem!important;
+        margin-bottom: 0.75rem!important;
+        padding: 0 4rem 0;
     }
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        width: 95%!important;
         label {
             margin-bottom: 0.5rem!important;
         }
         input, textarea {
-            border: 2px $a solid;
+            width: 100%!important;
+            color: $white;
+            border: 2px $f solid;
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 1rem;
             margin-bottom: 1rem!important;
             border-radius: 0.375rem;
             background: $i;
+            transition: $fadeTransition;
+            filter: drop-shadow(0px 0px 10px $h);
         }
+        textarea {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    input:focus, textarea:focus {
+        color: $a;
+        background: $b;
+        border: 2px $a solid;
+        filter: drop-shadow(0px 0px 6px $a);
+        transform: scale(1.1);
+        animation-name: glow;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes glow {
+        0% {filter: drop-shadow(0px 0px 6px $h);}
+        50% {filter: drop-shadow(0px 0px 10px $a);}
+        100% {filter: drop-shadow(0px 0px 6px $h);}
+    }
+
+    input[type="submit"] {
+        filter: drop-shadow(0px 0px 10px $h);
+        width: 100%!important;
+        margin-top: 1rem;
     }
 </style>

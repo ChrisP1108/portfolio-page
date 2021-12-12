@@ -17,7 +17,7 @@
       <div :class="[page === 'contact' ? 'blur-off' : 'blur-on', 'content-positioner']">
         <Contact />
       </div>
-      <div :class="[page !== 'home' && page !== 'contact' ? 'blur-off' : 'blur-on', 'links']">
+      <div :class="[page !== 'home' ? 'blur-off' : 'blur-on', 'links']">
         <Links />
       </div>
     </div>
@@ -50,7 +50,6 @@ export default {
     position: relative;
   }
   .background {
-    // filter: blur(1px);
     -webkit-filter: blur(0.0625rem);
     position: fixed;
     width: 100%;
