@@ -1,9 +1,11 @@
 <template>
     <div class="page-container">
         <h1 class="orange-text">Full Stack Developer</h1>
-        <div :key="item.id" v-for="item in homeButtons">
-            <Button :item="item" />
-        </div>
+        <div class="home-buttons">
+            <div :key="item.id" v-for="item in homeButtons">
+                <Button :item="item" />
+            </div>
+        </div>   
         <div class="home-image"></div>
         <div class="links-section">
             <h1 class="orange-text">Links</h1>
@@ -44,12 +46,11 @@
         height: 17rem;
     }
     @media(min-width: 576px) {
-        .page-container {
-            align-items: flex-end;
-        }
         .home-image {
-            left: -5vw;
-            height: 28rem;
+            left: 4vw;
+        }
+        .links-section {
+            margin-left: 50%;
         }
     }
 </style>
