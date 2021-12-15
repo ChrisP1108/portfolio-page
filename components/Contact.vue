@@ -110,12 +110,6 @@
         animation-iteration-count: infinite;
     }
 
-    @keyframes glow {
-        0% {filter: drop-shadow(0px 0px 6px $h);}
-        50% {filter: drop-shadow(0px 0px 10px $a);}
-        100% {filter: drop-shadow(0px 0px 6px $h);}
-    }
-
     input[type="submit"] {
         filter: drop-shadow(0px 0px 10px $h);
         width: 100%!important;

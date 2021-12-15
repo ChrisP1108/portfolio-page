@@ -1,6 +1,6 @@
 <template>
     <div class="page-container">
-        <h1 class="orange-text">Full Stack Developer</h1>
+        <h1 class="orange-text heading-shift">Full Stack Developer</h1>
         <div class="home-buttons">
             <div :key="item.id" v-for="item in homeButtons">
                 <Button :item="item" />
@@ -45,12 +45,34 @@
         left: 0vw;
         height: 17rem;
     }
-    @media(min-width: 576px) {
+    @media(min-width: $mobile) {
         .home-image {
-            left: 4vw;
+            left: -6vw;
+            height: 72vw;
         }
         .links-section {
-            margin-left: 50%;
+            margin-left: auto;
         }
+        .home-buttons {
+            width: 50%;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+    }
+    @media(min-width: $tablet) {
+        .home-image {
+            height: 37rem;
+            left: -4vw;
+        }
+        .heading-shift {
+            margin-left: auto;
+            width: 50%;
+        }
+    }
+    @media(min-width: $desktop) {
+        
     }
 </style>

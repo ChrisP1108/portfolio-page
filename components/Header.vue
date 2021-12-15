@@ -169,15 +169,18 @@
       margin: 0;
       text-align: center;
       cursor: pointer;
-      border-bottom: 0.1875rem transparent solid;
-      padding-bottom: 0.5rem;
     }
     h3:hover {
       color: $a;
-      border-bottom: 0.1875rem $a solid;
+      transform: scale(1.3);
     }
     .nav-active {
       color: $lightgray;
+    }
+    .nav-active:hover {
+      cursor: auto!important;
+      color: $lightgray!important;
+      transform: scale(1)!important;
     }
   }
 
@@ -193,7 +196,7 @@
     }
     .header-content-container {
       padding: 0;
-      padding: 0 2.5rem 0 2rem;
+      padding: 0 2rem 0 2rem;
     }
     .tablet-header-title-link-container {
       justify-content: center;
@@ -202,17 +205,15 @@
     }
     .logo-title {
       position: relative;
-      width: 52%;
+      width: 55%;
       align-items: center;
       justify-content: flex-start;
       height: 0;
 
       h1 {
         text-align: left;
+        margin-left: 1.5rem!important;
       }
-    }
-    h3 {
-      padding-top: 0.6875rem;
     }
   }
 </style>

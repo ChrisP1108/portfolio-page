@@ -101,19 +101,6 @@ export default {
     .content-container {
       max-width: 85%;
       top: $headerHeight + 5rem;
-      // left: 50%;
-      // top: $headerHeight + 3rem;
-      // transform: translateX(-50%);
-      // height: $containerHeight;
-      // background: linear-gradient(to bottom, $d, $e);
-      // box-shadow: 0.5rem 0.5rem 0.625rem $b;
-      // padding: 1.5rem;
-      // position: relative;
-      // display: flex;
-      // justify-content: center;
-      // max-width: 23.125rem;
-      // margin-bottom: 3rem;
-      // transition: $fadeTransition;
     }
   }
 </style>
