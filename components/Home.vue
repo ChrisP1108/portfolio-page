@@ -64,8 +64,8 @@
     }
     @media(min-width: $tablet) {
         .home-image {
-            height: 37rem;
-            left: -4vw;
+            height: 39rem;
+            left: -1vw;
         }
         .heading-shift {
             margin-left: auto;
@@ -73,6 +73,10 @@
         }
     }
     @media(min-width: $desktop) {
-        
+        .home-image {
+            left: -1vw;
+            top: 75vh;
+            height: 85vh;
+        }
     }
 </style>

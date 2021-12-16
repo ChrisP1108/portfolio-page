@@ -49,3 +49,9 @@ h2 {
 .active-nav-link {
     color: $white;
 }
+
+@media(min-width: 1024px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+}

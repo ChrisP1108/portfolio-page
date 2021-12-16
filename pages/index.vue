@@ -67,7 +67,7 @@ export default {
   }
 
   .content-container {
-    width: 85%;
+    width: 90%;
     left: 50%;
     top: $headerHeight + 3rem;
     transform: translateX(-50%);
@@ -97,10 +97,30 @@ export default {
     filter: blur(1rem);
   }
 
-  @media(min-width: 576px) {
+  @media(min-width: $mobile) {
     .content-container {
       max-width: 85%;
       top: $headerHeight + 5rem;
+    }
+  }
+
+  @media(min-width: $tablet) {
+    .content-container {
+      max-width: 85%;
+      top: 7rem + 4.5rem;
+      height: 40rem;
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  @media(min-width: $desktop) {
+    .content-container {
+      width: 75%;
+      max-width: 64rem;
+      overflow: visible;
+    }
+    .master-container {
+      overflow: hidden;
     }
   }
 </style>

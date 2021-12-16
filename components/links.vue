@@ -31,4 +31,10 @@
     .link-logo:hover {
         background: $white;
     }
+    @media(min-width: $desktop) {
+        .link-logo {
+            width: 3rem!important;
+            height: 3rem!important;
+        }
+    }
 </style>

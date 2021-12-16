@@ -122,7 +122,7 @@
     }
     .header-content-container {
       justify-content: flex-start;
-      padding: 1rem 1.5rem 0.1rem;
+      padding: 1rem 1.5rem 1rem;
     }
     img {
       width: 4rem;
@@ -149,7 +149,7 @@
       margin: 0 4.25rem 0;
 
       h1 {
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
       }
     }
     .nav-items {

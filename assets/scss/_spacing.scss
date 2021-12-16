@@ -1,3 +1,7 @@
 $headerHeight: 4.5rem;
 $bodyHeight: 100vh;
 $containerHeight: 36.75rem;
+
+@media(min-width: 768px) {
+    $headerHeight: 7rem!important;
+}

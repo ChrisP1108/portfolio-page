@@ -24,3 +24,9 @@
 .button-margin-bottom {
     margin-bottom: 1.5rem;
 }
+
+@media(min-width: 1024px) {
+    .button {
+        height: 2.75rem;
+    }
+}
