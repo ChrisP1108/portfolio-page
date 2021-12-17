@@ -7,7 +7,7 @@
             and allow users to actively be engaged, allowing better two way 
             communication and a much better quality user experience.
         </p>
-        <div>
+        <div class="about-buttons">
             <div :key="item.id" v-for="item in aboutButtons">
                 <Button :item="item" />
             </div>
@@ -35,6 +35,20 @@
         justify-content: space-between;
     }
     .padding {
-        padding: 0 8vw;
+        padding: 0 0.5rem;
+    }
+
+    @media(min-width: $tablet) {
+        .about-buttons {
+            margin-bottom: 1rem;
+        }
+    }
+    @media(min-width: $desktop) {
+        .about-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+        }
     }
 </style>

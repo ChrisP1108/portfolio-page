@@ -111,13 +111,15 @@ export default {
       height: 40rem;
       padding: 3rem 1.5rem;
     }
+    .links {
+      margin-top: auto;
+    }
   }
 
   @media(min-width: $desktop) {
     .content-container {
       width: 75%;
       max-width: 64rem;
-      overflow: visible;
     }
     .master-container {
       overflow: hidden;

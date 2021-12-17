@@ -1,7 +1,7 @@
 <template>
     <div class="page-container">
         <h1 class="orange-text">Portfolio</h1>
-        <p class="medium-text">Click Links Below See Various Projects </p>
+        <p class="medium-text">Click Links To See Various Projects </p>
         <div class="grid-container">
             <PortfolioSample :key="sample.id" v-for="sample in samples" :sample="sample" />
         </div>
@@ -73,12 +73,18 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-gap: 2rem;
+        grid-gap: 8vw;
     }
     .padding {
         padding: 0 8vw;
     }
     p {
         margin-bottom: 9vw;
+    }
+    @media(min-width: $mobile) {
+        .grid-container {
+            grid-column-gap: 16vw;
+            grid-row-gap: 3rem;
+        }
     }
 </style>

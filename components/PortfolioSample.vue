@@ -84,4 +84,32 @@
     img:hover {
         opacity: 0;
     }
+    @media(min-width: $tablet) {
+        .sample-container {
+            width: 7rem;
+            height: 7rem;
+        }
+        .background-container {
+            width: 7rem;
+            height: 7rem;
+        }
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    @media(min-width: $tablet) {
+        .sample-container {
+            width: 7rem;
+            height: 7rem;
+        }
+        .background-container {
+            width: 7rem;
+            height: 7rem;
+        }
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
 </style>

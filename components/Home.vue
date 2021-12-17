@@ -74,9 +74,16 @@
     }
     @media(min-width: $desktop) {
         .home-image {
-            left: -1vw;
-            top: 75vh;
-            height: 85vh;
+            left: 2vw;
+            top: 100%;
+            height: 39rem;
+        }
+    }
+    @media(min-width: $widescreen) {
+        .home-image {
+            left: 2rem;
+            top: 100%;
+            height: 39rem;
         }
     }
 </style>
