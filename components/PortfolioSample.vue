@@ -112,4 +112,14 @@
             height: 4rem;
         }
     }
+    @media(min-width: $desktop) {
+        .sample-container {
+            width: 8rem;
+            height: 8rem;
+        }
+        .background-container {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
 </style>

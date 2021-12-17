@@ -37,12 +37,6 @@
     .padding {
         padding: 0 0.5rem;
     }
-
-    @media(min-width: $tablet) {
-        .about-buttons {
-            margin-bottom: 1rem;
-        }
-    }
     @media(min-width: $desktop) {
         .about-buttons {
             display: flex;

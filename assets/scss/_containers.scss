@@ -41,6 +41,7 @@
 @media(min-width: 768px) {
     .page-container {
         width: 80vw!important;
+        padding-bottom: 1rem;
     }
 }
 
@@ -48,6 +49,7 @@
     .page-container {
         width: 70vw!important;
         max-width: 56rem;
+        padding-bottom: 2rem;
     }
     .links-container {
         display: flex;

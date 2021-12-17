@@ -66,6 +66,7 @@
         .home-image {
             height: 39rem;
             left: -1vw;
+            top: 105%;
         }
         .heading-shift {
             margin-left: auto;
@@ -75,14 +76,14 @@
     @media(min-width: $desktop) {
         .home-image {
             left: 2vw;
-            top: 100%;
+            top: 105%;
             height: 39rem;
         }
     }
     @media(min-width: $widescreen) {
         .home-image {
             left: 2rem;
-            top: 100%;
+            top: 105%;
             height: 39rem;
         }
     }

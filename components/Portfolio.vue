@@ -5,7 +5,7 @@
         <div class="grid-container">
             <PortfolioSample :key="sample.id" v-for="sample in samples" :sample="sample" />
         </div>
-        <div>
+        <div class="portfolio-buttons">
             <div :key="item.id" v-for="item in aboutButtons">
                 <Button :item="item" />
             </div>
@@ -85,6 +85,18 @@
         .grid-container {
             grid-column-gap: 16vw;
             grid-row-gap: 3rem;
+        }
+    }
+    @media(min-width: $tablet) {
+        .grid-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+        }
+        .button {
+            margin: 1rem 0 0;
         }
     }
 </style>

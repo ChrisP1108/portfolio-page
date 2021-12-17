@@ -65,6 +65,10 @@
 </script>
 
 <style lang="scss" scoped>
+    .page-container {
+        justify-content: space-between;
+        height: 34rem;
+    }
     h1 {
         margin-bottom: 1rem;
     }
@@ -113,6 +117,25 @@
     input[type="submit"] {
         filter: drop-shadow(0px 0px 10px $h);
         width: 100%!important;
-        margin-top: 1rem;
+        margin-top: 2rem;
+    }
+    @media(min-width: $mobile) {
+        input, textarea {
+            font-size: 1.125rem!important;
+        }
+    }
+    @media(min-width: $tablet) {
+        input, textarea {
+            font-size: 1.25rem!important;
+        }
+        p {
+            margin: 0.5rem 0 1.75rem!important;
+        }
+        input[type="submit"] {
+            margin-top: 1rem;
+        }
+        form {
+            max-width: 37.5rem;
+        }
     }
 </style>

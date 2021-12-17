@@ -17,7 +17,7 @@
       <div :class="[page === 'contact' ? 'blur-off' : 'blur-on', 'content-positioner']">
         <Contact />
       </div>
-      <div :class="[page !== 'home' ? 'blur-off' : 'blur-on', 'links']">
+      <div :class="[page !== 'home' && page !== 'contact' ? 'blur-off' : 'blur-on', 'links']">
         <Links />
       </div>
     </div>
@@ -109,7 +109,7 @@ export default {
       max-width: 85%;
       top: 7rem + 4.5rem;
       height: 40rem;
-      padding: 3rem 1.5rem;
+      padding: 2rem 1.5rem;
     }
     .links {
       margin-top: auto;
