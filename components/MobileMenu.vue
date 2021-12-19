@@ -99,4 +99,9 @@ export default {
         99% {transform: translateY(-100%); filter: blur(10rem)}
         100% {display: none;}
     }
+    @media(min-width: $tablet) {
+        .mobile-menu-container {
+            display: none;
+        }
+    }
 </style>

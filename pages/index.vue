@@ -1,6 +1,7 @@
 <template>
   <!-- All routing done in Vuex Store in router function-->
   <div class="master-container">
+    <Loading :class="[!loading && 'blur-on']" />
     <Header />
     <MobileMenu />
     <div class="background"></div>
@@ -39,6 +40,14 @@ export default {
     page() {
       return this.$store.state.pageSelected
     } 
+  },
+  data() {
+    return {
+      loading: true
+    }
+  },
+  created() {
+    setTimeout(() => this.loading = false, 2000);
   }
 }
 </script>
@@ -113,6 +122,9 @@ export default {
     }
     .links {
       margin-top: auto;
+    }
+    .blur-container {
+      filter: blur(0rem);
     }
   }
 
