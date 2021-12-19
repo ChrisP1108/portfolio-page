@@ -28,7 +28,7 @@ export const mutations = {
     pageToggler(state, value) {
         switch(value) {
             case 'resume':
-                window.open('www.google.com');
+                window.open('https://github.com/ChrisP1108/portfolio-page/raw/main/assets/documents/Resume.pdf');
                 break;
             default:
                 router(value);
