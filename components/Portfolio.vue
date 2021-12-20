@@ -91,7 +91,7 @@
         .grid-container {
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            width: 95%;
             grid-column-gap: 0;
             grid-row-gap: 0;
         }
