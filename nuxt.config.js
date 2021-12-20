@@ -2,7 +2,7 @@ export default {
   // Github Pages Deployment
   target: 'static',
   router: {
-    base: '/portfolio-page/'
+    base: '/portfolio-pages'
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -12,7 +12,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'portfolio-page',
+    title: 'Chris Paschall Portfolio Page',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
