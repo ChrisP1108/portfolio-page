@@ -2,7 +2,7 @@ export default {
   // Github Pages Deployment
   target: 'static',
   router: {
-    base: '/portfolio-page'
+    base: '/portfolio-page/'
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,

@@ -98,7 +98,7 @@ export default {
   }
   .links {
     margin-top: auto;
-    display: flex;
+    display: flex!important;
     justify-content: space-between;
     width: 50%;
   }

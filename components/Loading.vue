@@ -37,4 +37,13 @@
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
+    @media(min-width: 1400px) {
+        img {
+            width: 26.25rem;
+            width: 26.25rem;
+        }
+        h1 {
+            font-size: 13.125rem;
+        }
+    }
 </style>
