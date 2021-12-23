@@ -8,11 +8,11 @@ function router(value) {
         const routes = routesList.filter(route => route.name !== 'resume').map(route => route.name);
         const url = window.location.hash.slice(1);
         const setState = routes.includes(url) ? url : 'home';
-        window.history.pushState({}, '', setState === 'home' ? '/' : `#${setState}`);
+        window.history.pushState({}, '', setState === 'home' ? '/portfolio-page' : `#${setState}`);
         return setState;
     }
     // Page Clicked Route Change
-    window.history.pushState({}, '', value === 'home' ? '/' : `#${value}`);
+    window.history.pushState({}, '', value === 'home' ? '/portfolio-page' : `#${value}`);
 }
 
 export const state = () => ({
