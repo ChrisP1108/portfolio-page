@@ -30,31 +30,24 @@
                 samples: [
                     {
                         id: 1,
+                        title: 'Audiophile E-Commerce',
+                        framework: 'angular',
+                        imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/swxkgbgbn1z5yixxqwjb.jpg',
+                        url: 'https://www.frontendmentor.io/solutions/angular-typescript-localstorage-Ve-xq-UXr'
+                    },
+                    {
+                        id: 2,
                         title: 'Product Feedback App',
                         framework: 'vue',
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vnx44muoxqyn886oi5sb.jpg',
                         url: 'https://www.frontendmentor.io/solutions/vuejs-rXKKm4EN2'
                     },
                     {
-                        id: 2,
+                        id: 3,
                         title: 'Invoice App',
                         framework: 'react',
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/v760dr4mqyro0xey3dr3.jpg',
                         url: 'https://www.frontendmentor.io/solutions/react-js-sass-hooksforredux-3wkJ36EC0'
-                    },
-                    {
-                        id: 3,
-                        title: 'Pomodoro App',
-                        framework: 'react',
-                        imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/tiush3hkni9uznayk0hr.jpg',
-                        url: 'https://www.frontendmentor.io/solutions/react-js-sass-javascript-state-variables-into-inline-css-tIjFBRVPm'
-                    },
-                    {
-                        id: 4,
-                        title: 'The Planets',
-                        framework: 'react',
-                        imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/g9eewklurmolti0smptf.jpg',
-                        url: 'https://www.frontendmentor.io/solutions/react-js-css-Wkb7XDzsI'
                     }
                 ]
             }
@@ -91,7 +84,7 @@
         .grid-container {
             display: flex;
             justify-content: space-between;
-            width: 95%;
+            width: 80%;
             grid-column-gap: 0;
             grid-row-gap: 0;
         }

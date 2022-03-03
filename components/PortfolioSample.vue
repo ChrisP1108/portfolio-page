@@ -1,7 +1,7 @@
 <template>
     <div @click="openPage" class="sample-container">
         <p class="medium-text">{{ sample.title }}</p>
-        <img :src="`${baseUrl}/${sample.framework}-icon.svg`" :alt="sample.framework">
+        <img :class="sample.framework === 'angular' ? 'scale-up' : ''" :src="`${baseUrl}/${sample.framework}-icon.svg`" :alt="sample.framework">
         <div v-bind:style="backgroundImg" class="background-container"></div>
     </div>
 </template>
@@ -42,6 +42,7 @@
         position: relative;
     }
     .background-container {
+        background-size: cover!important;
         width: 6.25rem;
         height: 6.25rem;
         border-radius: 25%;
@@ -121,5 +122,8 @@
             width: 8rem;
             height: 8rem;
         }
+    }
+    .scale-up {
+        transform: scale(1.4) translateY(-37%);
     }
 </style>
