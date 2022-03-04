@@ -30,7 +30,7 @@
                 samples: [
                     {
                         id: 1,
-                        title: 'Audiophile E-Commerce',
+                        title: 'Audiophile E-Commerce App',
                         framework: 'angular',
                         imgSrc: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/swxkgbgbn1z5yixxqwjb.jpg',
                         url: 'https://www.frontendmentor.io/solutions/angular-typescript-localstorage-Ve-xq-UXr'

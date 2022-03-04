@@ -1,6 +1,6 @@
 <template>
     <div @click="openPage" class="sample-container">
-        <p class="medium-text">{{ sample.title }}</p>
+        <p class="portfolio-container-text">{{ sample.title }}</p>
         <img :class="sample.framework === 'angular' ? 'scale-up' : ''" :src="`${baseUrl}/${sample.framework}-icon.svg`" :alt="sample.framework">
         <div v-bind:style="backgroundImg" class="background-container"></div>
     </div>
@@ -56,6 +56,14 @@
         transition: 0.5s;
         z-index: 5;
     }
+    .portfolio-container-text {
+        font-family: 'Hammersmith One', sans-serif;
+        color: $a;
+        font-size: 0.75rem;
+        transition: $fadeTransition;
+        margin: 0;
+        text-align: center;
+    }
     .sample-container:hover {
         transform: scale(1.5);
         z-index: 10;
@@ -98,6 +106,9 @@
             width: 4rem;
             height: 4rem;
         }
+        .portfolio-container-text {
+            font-size: 0.875rem;
+        }
     }
     @media(min-width: $tablet) {
         .sample-container {
@@ -121,6 +132,9 @@
         .background-container {
             width: 8rem;
             height: 8rem;
+        }
+        .portfolio-container-text {
+            font-size: 1rem;
         }
     }
     .scale-up {
