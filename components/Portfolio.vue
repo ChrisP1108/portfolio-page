@@ -2,7 +2,7 @@
     <div class="page-container">
         <h1 class="orange-text">Portfolio</h1>
         <p class="medium-text">Click Links To See Various Projects </p>
-        <div class="grid-container">
+        <div class="flex-container">
             <PortfolioSample :key="sample.id" v-for="sample in samples" :sample="sample" />
         </div>
         <div class="portfolio-buttons">
@@ -62,23 +62,17 @@
     .page-container {
         justify-content: space-between;
     }
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 8vw;
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8vw;
+        justify-content: center;
     }
     .padding {
         padding: 0 8vw;
     }
     p {
         margin-bottom: 9vw;
-    }
-    @media(min-width: $mobile) {
-        .grid-container {
-            grid-column-gap: 16vw;
-            grid-row-gap: 3rem;
-        }
     }
     @media(min-width: $tablet) {
         .grid-container {
