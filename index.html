@@ -8,12 +8,14 @@
   <script src="/portfolio-page/_nuxt/17f0e0a.js"></script><script src="/portfolio-page/_nuxt/e487ce1.js"></script><script src="/portfolio-page/_nuxt/0bbff04.js"></script><script src="/portfolio-page/_nuxt/65f9e95.js"></script>
   <script>
     window.addEventListener('load', () => {
-	    const links = document.querySelectorAll('link');
-      links.forEach(link => {
-        if (link.href.includes('png')) {
-          link.href = "https://raw.githubusercontent.com/ChrisP1108/portfolio-page/main/static/icon.png";
-        }
-      });
+      setTimeout(() => {
+	      const links = document.querySelectorAll('link');
+	      links.forEach(link => {
+		if (link.href.includes('png')) {
+		  link.href = "https://raw.githubusercontent.com/ChrisP1108/portfolio-page/main/static/icon.png";
+		}
+	      });
+      }, 100);
     });
   </script>
   </body>
